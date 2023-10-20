@@ -3,7 +3,7 @@ function maxOfTwoNumbers(number1, number2) {
   if (number1 > number2) {
     return number1;
   } else {
-    return number2 
+    return number2
   }
 
 }
@@ -14,12 +14,12 @@ function maxOfTwoNumbers(number1, number2) {
 // Iteration #2: Find longest word
 function findLongestWord(words) {
   if (words.length == 0) {
-    return null 
+    return null
   }
-  let longestWord =  words[0]
+  let longestWord = words[0]
   for (let i = 0; i < words.length; i++) {
     if (words[i].length > longestWord.length) {
-    longestWord = words[i]
+      longestWord = words[i]
     }
   }
   return longestWord
@@ -33,17 +33,30 @@ function sumNumbers(numbers) {
   let sum = 0
   for (let i = 0; i < numbers.length; i++) {
     sum += numbers[i];
-  } 
-  return sum 
+  }
+  return sum
 }
 
 
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum(someArr) {  
 
-
+let sum = 0
+for (let i = 0; i < someArr.length; i++) {
+  if (typeof someArr[i] === "number") {
+    sum += someArr[i]
+  } else if (typeof someArr[i] === "string") {
+    sum += someArr[i].length
+  } else if (someArr[i] === true) {
+    sum += 1
+  } else if (typeof someArr[i] === "object" || typeof someArr[i] === "array") {
+    return error
+  }
+}
+return sum
+}
 
 
 // Iteration #4: Calculate the average
@@ -53,9 +66,9 @@ function averageNumbers(numbersAvg) {
     return null
   }
   let sum = 0
-  for (let i = 0; i < numbersAvg.length; i++ ) {
+  for (let i = 0; i < numbersAvg.length; i++) {
     sum += numbersAvg[i]
-  } 
+  }
   return sum / numbersAvg.length
 }
 
@@ -63,7 +76,7 @@ function averageNumbers(numbersAvg) {
 
 
 // Level 2: Array of strings
-function averageWordLength(wordsArr) { 
+function averageWordLength(wordsArr) {
   if (wordsArr.length == 0) {
     return null
   }
@@ -73,7 +86,7 @@ function averageWordLength(wordsArr) {
   }
   return sum / wordsArr.length
 }
-  
+
 
 
 // Bonus - Iteration #4.1
@@ -82,16 +95,16 @@ function avg(arr) {
     return null
   }
   let sum = 0
-  for (let i=0; i<arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (typeof arr[i] === "number") {
       sum += arr[i]
     } else if (typeof arr[i] === "string") {
-      sum += arr[i].length 
+      sum += arr[i].length
     } else if (arr[i] === true) {
-      sum+=1
-    } 
+      sum += 1
+    }
   }
-  return sum /arr.length
+  return sum / arr.length
 }
 
 
@@ -102,7 +115,7 @@ function uniquifyArray(wordsUnique) {
     return null
   }
   const newArray = []
-  for (i=0; i<wordsUnique.length; i++) {
+  for (i = 0; i < wordsUnique.length; i++) {
     if (newArray.includes(wordsUnique[i]) == false) {
       newArray.push(wordsUnique[i])
     }
@@ -119,10 +132,10 @@ function doesWordExist(wordsFind, wordToSearch) {
   if (wordsFind.length == 0) {
     return null
   }
-  for (let i=0; i<wordsFind.length; i++) {
+  for (let i = 0; i < wordsFind.length; i++) {
     if (wordToSearch == wordsFind[i]) {
       return true
-    } 
+    }
   }
   return false
 }
@@ -133,10 +146,10 @@ function doesWordExist(wordsFind, wordToSearch) {
 
 // Iteration #7: Count repetition
 function howManyTimes(wordsCount, wordsToSearch) {
-let numberOfOccurence = 0
-for (let i=0; i<wordsCount.length; i++) {
-  if (wordsCount[i] == wordsToSearch) {
-    numberOfOccurence++
+  let numberOfOccurence = 0
+  for (let i = 0; i < wordsCount.length; i++) {
+    if (wordsCount[i] == wordsToSearch) {
+      numberOfOccurence++
     }
   }
   return numberOfOccurence
