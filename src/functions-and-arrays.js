@@ -115,7 +115,7 @@ function uniquifyArray(wordsUnique) {
     return null
   }
   const newArray = []
-  for (i = 0; i < wordsUnique.length; i++) {
+  for (let i = 0; i < wordsUnique.length; i++) {
     if (newArray.includes(wordsUnique[i]) == false) {
       newArray.push(wordsUnique[i])
     }
